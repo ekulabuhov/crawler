@@ -24,8 +24,13 @@ app.get('/listTolkbacks', (req, res) => {
   })
 })
 
-app.listen(8081);
-console.log('http://localhost:8081/listTolkbacks');
+var port = process.env.PORT || 8081;
+var server = app.listen(port, function() {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('Server app listening at http://%s:%s', host, port);
+});
 
 app.use(express.static('./'))
 app.use(express.static('./src/client'))
