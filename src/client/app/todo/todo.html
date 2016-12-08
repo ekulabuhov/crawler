@@ -1,0 +1,18 @@
+<div class="col-md-4 center-block">
+  <h2>Todo</h2>
+  <div>
+    <span>{{todoList.todos.length}} remaining</span>
+    <ul class="">
+      <li ng-repeat="todo in todoList.todos">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="todo.done" ng-click="todoList.archive()">
+          <a class="done-{{todo.done}}" target="_new" ng-href="{{todo.url}}">{{todo.title}}</a>
+        </label>
+      </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()">
+      <input type="text" ng-model="todoList.todoText" size="30" placeholder="add new todo here">
+      <input class="btn-primary" type="submit" value="add">
+    </form>
+  </div>
+</div>

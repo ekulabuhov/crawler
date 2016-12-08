@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="app">
+
+	<head>
+		<!-- Vendor JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-route.min.js"></script>
+		
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<!-- App CSS -->
+		<link rel="stylesheet" href="/src/client/app/styles.css">
+		<link rel="stylesheet" href="/src/client/app/todo/todo.css">
+	</head>
+
+	<body class="container">
+		<div ng-view></div>
+
+		<!-- Bootstrapping -->
+		<script src="/src/client/app/app.module.js"></script>
+
+		<!-- services -->
+		<script src="/src/client/app/services/data.service.js"></script>
+		<script src="/src/client/app/services/localstorage.service.js"></script>
+
+		<!-- todo list -->
+		<script src="/src/client/app/todo/config.route.js"></script>
+		<script src="/src/client/app/todo/todo.controller.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,15 @@
+/* Global styles and bootstrap fixes */
+
+.center-block {
+	/* bootstrap doesn't do that */
+	float: none;
+}
+
+.container {
+	padding-bottom: 20px;
+}
+
+ul {
+	padding: 0;
+	margin: 0 0 0px 21px;
+}
